@@ -22,6 +22,8 @@
         <meta property="description" content="Browse the 'don on a Pokédex!" />
 		<meta property="og:description" content="Browse the 'don on a Pokédex!" />
 
+        <script src="https://cdn.usefathom.com/script.js" data-site="SSRZTBHH" defer></script>
+
     </head>
     <body>
 
