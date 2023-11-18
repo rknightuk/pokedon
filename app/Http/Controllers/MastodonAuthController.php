@@ -19,7 +19,7 @@ class MastodonAuthController extends Controller
 
         if (empty($server)) {
             $info = Mastodon::domain($domain)
-                ->createApp(env('APP_NAME'), config('services.mastodon.callback'), 'read');
+                ->createApp(env('APP_NAME'), config('services.mastodon.redirect'), 'read');
 
             $server = Server::create([
                 'domain'        => $domain,
