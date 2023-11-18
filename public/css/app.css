@@ -53,6 +53,12 @@ footer {
     font-size: 1.2em;
 }
 
+keycode {
+    background: white;
+    border: 1px solid black;
+    padding: 0 3px;
+}
+
 .pd {
     margin-top: 50px;
     display: grid;

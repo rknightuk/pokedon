@@ -4,6 +4,10 @@
 
 @section('content')
 
+<div style="text-align: center">
+    <p><keycode>↑</keycode> to go to newer toots. <keycode>↓</keycode> to go to older toots. <keycode>S</keycode> to listen to the toot.</p>
+</div>
+
 <div class="pd">
         <div class="pdl">
         <div class="poak close" id="poak">
