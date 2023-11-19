@@ -31,7 +31,7 @@
 
                     <div class="pdl-screen screen" id="toot">
                         @foreach ($toots as $index => $toot)
-                            <span data-index="{{ $index }}" @if($index === 0) class="current-toot" @endif>
+                            <span data-index="{{ $index }}" data-id="{{ $toot['id'] }}" @if($index === 0) class="current-toot" @endif>
                                 {!! $toot['content'] !!}
                                 <p><a href="{{ $toot['url'] }}">{{ \Carbon\Carbon::parse($toot['created_at'])->diffForHumans() }}</a></p>
                             </span>
