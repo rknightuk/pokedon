@@ -31,7 +31,7 @@
 
                     <div class="pdl-screen screen" id="toot">
                         @foreach ($toots as $index => $toot)
-                            <span data-id="{{ $index }}" @if($index === 0) class="current-toot" @endif>
+                            <span data-index="{{ $index }}" @if($index === 0) class="current-toot" @endif>
                                 {!! $toot['content'] !!}
                                 <p><a href="{{ $toot['url'] }}">{{ \Carbon\Carbon::parse($toot['created_at'])->diffForHumans() }}</a></p>
                             </span>
@@ -90,13 +90,13 @@
                     <div class="profile">
                         <div class="profile-image">
                             @foreach ($toots as $index => $toot)
-                                <img data-id="{{ $index }}" class="avatar @if($index === 0) current-toot @endif" src="{!! $toot['account']['avatar'] !!}">
+                                <img data-index="{{ $index }}" class="avatar @if($index === 0) current-toot @endif" src="{!! $toot['account']['avatar'] !!}">
                             @endforeach
                         </div>
                         <div class="profile-data">
                             <div class="profile-data-name">
                                 @foreach ($toots as $index => $toot)
-                                    <span data-id="{{ $index }}" @if($index === 0) class="current-toot" @endif>
+                                    <span data-index="{{ $index }}" @if($index === 0) class="current-toot" @endif>
                                         {!! $toot['account']['display_name'] !!}<br>
                                         <a href="{!! $toot['account']['url'] !!}" target="_blank" rel="noopener">profile</a><br>
                                         {!! $toot['account']['note'] !!}
@@ -159,9 +159,9 @@
             if (currentTootIndex < 0) {
                 currentTootIndex = maxToots
             }
-            Array.from(document.querySelectorAll('[data-id]')).forEach(e => {
+            Array.from(document.querySelectorAll('[data-index]')).forEach(e => {
                 e.classList.remove('current-toot')
-                e.dataset.id == currentTootIndex ? e.classList.add('current-toot') : null
+                e.dataset.index == currentTootIndex ? e.classList.add('current-toot') : null
             })
         }
 
@@ -170,9 +170,9 @@
             if (currentTootIndex > maxToots) {
                 currentTootIndex = 0
             }
-            Array.from(document.querySelectorAll('[data-id]')).forEach(e => {
+            Array.from(document.querySelectorAll('[data-index]')).forEach(e => {
                 e.classList.remove('current-toot')
-                e.dataset.id == currentTootIndex ? e.classList.add('current-toot') : null
+                e.dataset.index == currentTootIndex ? e.classList.add('current-toot') : null
             })
         }
 

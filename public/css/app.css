@@ -397,7 +397,7 @@ keycode {
     image-rendering: pixelated;
 }
 
-[data-id] {
+[data-index] {
     display: none;
 }
 
