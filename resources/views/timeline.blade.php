@@ -213,7 +213,6 @@
                 currentBoundary++
                 toot.innerHTML = `<p>${tootWords.slice(0, currentBoundary).join(' ')}</p>`
             });
-            console.log(msg.text)
             window.speechSynthesis.speak(msg)
         })
 
