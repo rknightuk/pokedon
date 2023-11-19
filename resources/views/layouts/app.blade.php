@@ -35,7 +35,7 @@
 
     <footer>
         <p>
-            A hackathon project by <a href="https://rknight.me">Robb Knight</a> • <a href="https://rknight.me/coffee">Buy Me a Coffee</a> @if (session('mastodon_user')) • <a href="/auth/logout">Logout</a> @endif
+            A hackathon project by <a href="https://rknight.me">Robb Knight</a> • <a href="https://rknight.me/coffee">Buy Me a Coffee</a> • <a href="https://www.streamlinehq.com/icons/pixel">Pixel Icons</a> @if (session('mastodon_user')) • <a href="/auth/logout">Logout</a> @endif
         </p>
     </footer>
 
