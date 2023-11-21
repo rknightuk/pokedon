@@ -382,6 +382,7 @@ keycode {
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 20px;
+    word-break: break-all;
 }
 
 .profile {
@@ -407,7 +408,7 @@ keycode {
 
 .poak {
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 75px;
     height: 230px;
     overflow: hidden;
