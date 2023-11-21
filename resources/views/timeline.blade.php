@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div style="text-align: center">
+<div class="instructions">
     <p><keycode>↑</keycode> to go to newer toots. <keycode>↓</keycode> to go to older toots. <keycode>S</keycode> to listen to the toot.</p>
 </div>
 
@@ -15,11 +15,21 @@
         </div>
             <div class="pdl-buttons">
                 <div class="pdl-buttons-camera">
+                    @foreach ($toots as $index => $toot)
+                        <a href="{!! $toot['account']['url'] !!}" target="_blank" rel="noopener">
+                            <img data-index="{{ $index }}" class="avatar @if($index === 0) current-toot @endif" src="{!! $toot['account']['avatar'] !!}">
+                        </a>
+                    @endforeach
                 </div>
-                <div class="pdl-buttons-circles">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div>
+                    <div class="pdl-buttons-circles">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pdl-buttons-logo">
+                        <img src="/logo.png" alt="Pokédon" />
+                    </div>
                 </div>
             </div>
             <div class="pdl-container">
