@@ -462,6 +462,10 @@ keycode {
 }
 
 @media (max-width: 750px) {
+
+    .pd {
+        margin-top: 5px;
+    }
     header {
         display: none;
     }
