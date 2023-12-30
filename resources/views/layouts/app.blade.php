@@ -19,7 +19,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <meta property="og:image" content="/icons/preview.png">
-        <meta property="description" content="Browse the 'don on a Pokédex!" />
+        <meta name="description" content="Browse the 'don on a Pokédex!" />
 		<meta property="og:description" content="Browse the 'don on a Pokédex!" />
 
         <script src="https://cdn.usefathom.com/script.js" data-site="SSRZTBHH" defer></script>
